@@ -1,0 +1,16 @@
+body{
+    background-color:#eeeaae;
+}
+
+.button{
+    width:200px;
+    height:20px;
+}
+
+.text_out{
+    width:400;
+    height:400;
+    border:2px solid;
+}
+
+

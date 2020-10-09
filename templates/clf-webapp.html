@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='UTF-8'>
+    <title>ml-classifier on web</title>
+    <link rel='stylesheet' href="{{url_for('static',filename='css/clf-webapp.css')}}">
+    <script src="{{url_for('static',filename='js/clf-webapp.js')}}" defer></script>
+</head>
+<body>
+    <header>
+        <h3><a href ='/clf-webapp'><img class='top-img' src="static/images/robotBig.png" alt="Shin Fujito's portfolio"></a></h3>
+        <p class='top-text'>
+            {% if predictionResult%}
+                {{commentFromRobot}}
+                <br>再度予測したい画像をアップロードして下さい</br>
+            {% else %}
+                {{commentFromRobot}}
+            {% endif %}
+        </p>
+    </header>
+
+    <form method=post enctype=multipart/form-data>
+        <p><input class='file-zone1' type=file name=file id='upload-image-by-button'>
+           <input class='submitButton' type=submit value='予測する'>
+    </form>
+
+    <div class='file-preview-area'>
+        <h3>アップロードした画像</h3>
+        <div class='image-list'>
+        </div>
+    </div>
+
+</body>
+</html>

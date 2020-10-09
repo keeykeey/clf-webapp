@@ -1,0 +1,9 @@
+./
+../
+.DS_Store
+.git
+__pycache__/
+models/
+test-datas/test-data/
+test-datas/test-data2/
+test-datas/.env

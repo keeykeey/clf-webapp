@@ -1,0 +1,27 @@
+<html>
+<head>
+    <link rel='stylesheet' href="{{url_for('static',filename='css/test_page.css')}}">
+    <script src='{{url_for('static',filename='js/test_page.js')}}' defer></script>
+</head>
+
+<body>
+    <form method=post enctype=multipart/form-data>
+    <p>
+        <input type='hidden'>
+        <input type='text'  id='text_input1' class='input' name=testFile1>
+        <input type='text'  id='text_input2' class='input' name=testFile2>
+        <input class = 'button' type='submit' value='run the code'>
+    </p>
+    </form>    
+ 
+    <p>
+    # フォームにアクションを加えたら、pythonで計算した結果を同じページの特定の場所に表示させることをできるようにしたい。
+    </p>
+
+    <div class='text_out'>
+        {{request.form['testFile2']}}
+    </dev>
+
+</body>
+
+</html>
